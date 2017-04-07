@@ -10,21 +10,6 @@
 
 #define STRING_MAX		256
 
-/**
-    - main thread
-        - lock mutex
-        - spawn time thread
-        - unlock mutex if time is called by user
-        - join threads after unlocking
-        - call function to read in time
-    - function: read in time from file
-    - function: time thread that writes to file
-        - try to lock mutex
-        - write to file
-        - unlock mutex
-    -
-**/
-
 struct GameEnvironment{
     char* room_folder;
     char* rooms[7];
